@@ -54,7 +54,8 @@
     }
 
     function toggleCross(cell) {
-      cell.classList.toggle('crossed');
+      const isCrossed = cell.classList.contains('crossed');
+      cell.classList.toggle('crossed', !isCrossed);
     }
   </script>
 </body>

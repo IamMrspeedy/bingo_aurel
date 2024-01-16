@@ -47,6 +47,7 @@ button:hover, a:hover {
 }
 
 .bingo-cell {
+  position: relative;
   display: flex;
   cursor: pointer;
   align-items: center;
@@ -81,10 +82,15 @@ button:hover, a:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 2rem;
-  color: #e74c3c;
+  font-size: 5rem;
+  color: #e74d3c67;
   visibility: hidden;
 }
+
+.crossed .cross {
+  visibility: visible;
+}
+
 form {
   padding: 2%;
   display: flex;
@@ -125,7 +131,6 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: #218c53;
 }
-
 
 .crossed .cross {
   visibility: visible;
