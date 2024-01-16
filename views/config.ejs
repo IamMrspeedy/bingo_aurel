@@ -12,15 +12,15 @@
     <header>
       <h1>Bingo Configuration</h1>
       <div class="header-buttons">
-        <a href="/">Back to Game</a>
+        <a href="/">Retour au Bingo</a>
       </div>
     </header>
     <form action="/config" method="post">
-      <label for="columns">Column Values:</label>
+      <label for="columns">Les colonnes doivent tous être égales. Mettre une virgule entre chaque mot</label>
       <% for (let i = 0; i < columnValues.length; i++) { %>
         <input type="text" name="columns[]" value="<%= columnValues[i].join(',') %>">
       <% } %>
-      <button type="submit">Update Configuration</button>
+      <button type="submit">Mise à jour de la configuration</button>
     </form>
   </div>
 </body>
