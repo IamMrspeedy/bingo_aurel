@@ -16,7 +16,7 @@
       </div>
     </header>
     <form action="/config" method="post">
-      <label for="columns">Les colonnes doivent tous être égales. Mettre une virgule entre chaque mot</label>
+      <label for="columns">Les colonnes doivent tous être égales. Mettre une virgule entre chaque mot.</label>
       <% for (let i = 0; i < columnValues.length; i++) { %>
         <input type="text" name="columns[]" value="<%= columnValues[i].join(',') %>">
       <% } %>

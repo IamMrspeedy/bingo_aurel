@@ -54,10 +54,9 @@ button:hover, a:hover {
   justify-content: center;
   width: 120px;
   height: 120px;
-  margin: 0.8rem;
-  border: 0.2rem solid #95a5a6;
+
+  border: 0.1rem solid black;
   box-sizing: border-box;
-  border-radius: 0.64rem;
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
 }
@@ -71,8 +70,9 @@ button:hover, a:hover {
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 0.8rem;
-  font-size: 1rem;
+  padding: 0.2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
   text-align: center;
 }
 
@@ -82,7 +82,7 @@ button:hover, a:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 5rem;
+  font-size: 7rem;
   color: #e74d3c67;
   visibility: hidden;
 }
