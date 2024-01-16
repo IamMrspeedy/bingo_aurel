@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bingo Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Bingo Game</h1>
+      <div class="header-buttons">
+        <button onclick="randomizeGrid()">Randomize Grid</button>
+        <a href="/config">Config</a>
+      </div>
+    </header>
+    
+    <div class="bingo-board">
+      <table class="bingo-table">
+        <% for (let i = 0; i < gridSize; i++) { %>
+          <tr>
+            <% for (let j = 0; j < gridSize; j++) { %>
+              <td>
+                <div class="bingo-cell" onclick="toggleCross(this)">
+                  <span class="bingo-text"><%= bingoGrid[i][j] %></span>
+                  <span class="cross">✕</span>
+                </div>
+              </td>
+            <% } %>
+          </tr>
+        <% } %>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    function randomizeGrid() {
+      fetch('/randomize?name=default')
+        .then(response => response.json())
+        .then(data => updateGrid(data.bingoGrid))
+        .catch(error => console.error('Error:', error));
+    }
+
+    function updateGrid(newGrid) {
+      const table = document.querySelector('.bingo-table');
+      const cells = table.querySelectorAll('.bingo-cell .bingo-text');
+
+      newGrid.flat().forEach((value, index) => {
+        cells[index].textContent = value;
+        cells[index].parentNode.classList.remove('crossed');
+      });
+    }
+
+    function toggleCross(cell) {
+      cell.classList.toggle('crossed');
+    }
+  </script>
+</body>
+</html>

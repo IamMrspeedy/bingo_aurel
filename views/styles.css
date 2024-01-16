@@ -1,0 +1,91 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    margin: 0;
+    color: #333;
+  }
+  
+  .header-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  button, a {
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover, a:hover {
+    background-color: #45a049;
+  }
+  
+  .bingo-board {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .bingo-table {
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .bingo-cell {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .bingo-text {
+    display: block;
+    padding: 10px;
+  }
+  
+  .cross {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5em;
+    color: #ff0000; /* Cross color, you can customize it */
+    visibility: hidden;
+  }
+  
+  .crossed .cross {
+    visibility: visible;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .container {
+      padding: 10px;
+    }
+  
+    .bingo-table td {
+      padding: 10px;
+      font-size: 1em;
+    }
+  }
+  
