@@ -19,7 +19,8 @@ header {
   margin-bottom: 1.6rem;
 }
 
-button, a {
+button,
+a {
   padding: 0.8rem 1.2rem;
   background-color: #3498db;
   color: #fff;
@@ -30,7 +31,8 @@ button, a {
   transition: background-color 0.3s;
 }
 
-button:hover, a:hover {
+button:hover,
+a:hover {
   background-color: #2980b9;
 }
 
@@ -54,15 +56,15 @@ button:hover, a:hover {
   justify-content: center;
   width: 120px;
   height: 120px;
-
-  border: 0.1rem solid black;
   box-sizing: border-box;
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
+  border: 0.1rem solid black;
+  margin: -3px;
 }
 
 .bingo-cell:hover {
-  transform: scale(1.05);
+  transform: scale(0.96);
 }
 
 .bingo-text {
@@ -71,7 +73,6 @@ button:hover, a:hover {
   justify-content: center;
   width: 100%;
   padding: 0.2rem;
-  font-size: 1.2rem;
   font-weight: bold;
   text-align: center;
 }
