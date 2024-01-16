@@ -7,16 +7,16 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Serve static files from the 'public' directory
 app.use(express.static('public'));
 
 let columnValues = [
-  ["Pardon Express 😅", "Roulage de pelle collectif 🚜", "Quelqu'un cache mal quelque chose 🙈", "Aurel pré-shot dialogue 🎙️", "Tromperie dans la cafet 🍴"],
-  ["Quelqu'un fait sa valise 🧳", "Sacré José ! 😄", "Johanna est Bigflo 🎤", "Shoes sur le lit 👠", "Body shaming 🚷"],
+  ["Pardon Express 😅", "Roulage de pelle collectif 🚜", "Qqun cache mal qqchose 🙈", "Aurel pré-shot dialogue 🎙️", "Tromperie dans la cafet 🍴"],
+  ["Qqun fait sa valise 🧳", "Sacré José ! 😄", "Johanna est Bigflo 🎤", "Shoes sur le lit 👠", "Body shaming 🚷"],
   ["Ça parle en francs 💰", "Rires sur truc bad 😬", "Aurel pré-shot le jingle 🎶", "Dodo avec lumière 💡", "La cafet devient un étoilé 🌟"],
   ["Rire préféré d'Aurel 😄", "Mais putain Christian ! 😮", "Ça passe par la fenêtre 🪟", "Perche! 🎤", "Personne ne boit pareil 🍹"],
   ["Ça joue la fin d'un morceau 🎸", "Plouf dans la baignoire 🛁", "Ils ne savent pas s'asseoir 🪑", "Mais putain Christian ! 😆", "Course à faire 🏃"]
 ];
+
 
 
 function shuffleArray(array) {
@@ -37,11 +37,9 @@ function generateBingoGrid() {
     grid.push(column);
   }
 
-  // Flatten the grid and shuffle the strings
   const flatGrid = grid.flat();
   shuffleArray(flatGrid);
 
-  // Reconstruct the shuffled grid
   const gridSize = columnValues.length;
   const shuffledGrid = [];
   for (let i = 0; i < gridSize; i++) {
@@ -67,10 +65,8 @@ app.get('/config', (req, res) => {
 });
 
 app.post('/config', (req, res) => {
-  // Update columnValues based on user input
   columnValues = req.body.columns.map(col => col.split(','));
 
-  // Redirect back to the config page
   res.redirect('/config');
 });
 

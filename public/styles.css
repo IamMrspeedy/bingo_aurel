@@ -68,6 +68,7 @@ a:hover {
 }
 
 .bingo-text {
+  font-size: 1.2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -142,9 +143,7 @@ button[type="submit"]:hover {
     flex: 0 0 calc(40% - 1.6rem);
   }
 
-  .bingo-text {
-    font-size: 1.4rem;
-  }
+ 
 
   .cross {
     font-size: 1.6rem;
