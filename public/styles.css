@@ -1,50 +1,37 @@
-/* styles.css */
-
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f0f0f0; /* Light gray background */
+  background-color: #f0f0f0;
 }
 
 .container {
-  max-width: 75%;
-  margin: 2rem auto; /* Use rem for margin */
+  max-width: 80%;
+  margin: 2rem auto;
   background-color: #fff;
-  padding: 2rem;
-  box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.1);
-  border-radius: 0.8rem; /* Rounded corners */
+  padding: 1.6rem;
+  box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.64rem;
 }
 
 header {
   text-align: center;
-  margin-bottom: 2rem;
-}
-
-h1 {
-  margin: 0;
-  color: #2c3e50; /* Dark blue-gray text color */
-}
-
-.header-buttons {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  margin-bottom: 1.6rem;
 }
 
 button, a {
-  padding: 1rem 1.5rem; /* Use rem for padding */
-  background-color: #3498db; /* Blue button color */
+  padding: 0.8rem 1.2rem;
+  background-color: #3498db;
   color: #fff;
   border: none;
-  border-radius: 0.5rem; /* Rounded corners */
+  border-radius: 0.5rem;
   cursor: pointer;
   text-decoration: none;
   transition: background-color 0.3s;
 }
 
 button:hover, a:hover {
-  background-color: #2980b9; /* Darker blue on hover */
+  background-color: #2980b9;
 }
 
 .bingo-board {
@@ -54,46 +41,91 @@ button:hover, a:hover {
 }
 
 .bingo-table {
-  border-collapse: collapse;
-  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .bingo-cell {
-  position: relative;
+  display: flex;
   cursor: pointer;
-  flex: 0 0 calc(20% - 2rem); /* Use rem for width and margin */
-  margin: 1rem; /* Use rem for margin */
-  border: 0.2rem solid #95a5a6; /* Light blue-gray border */
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  margin: 0.8rem;
+  border: 0.2rem solid #95a5a6;
   box-sizing: border-box;
-  border-radius: 0.8rem; /* Rounded corners */
+  border-radius: 0.64rem;
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
 }
 
 .bingo-cell:hover {
-  transform: scale(1.05); /* Enlarge on hover */
+  transform: scale(1.05);
 }
 
 .bingo-text {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  padding: 1rem; /* Use rem for padding */
-  font-size: 1.6rem; /* Use rem for font size */
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
   text-align: center;
 }
 
 .cross {
-  z-index: 1; /* Ensure the cross is above the text */
+  z-index: 1;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 2rem; /* Increase font size for a larger cross */
-  color: #e74c3c; /* Red cross color */
+  font-size: 2rem;
+  color: #e74c3c;
   visibility: hidden;
 }
+form {
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+label {
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+  font-size: 1.2rem;
+}
+
+input {
+  padding: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #bdc3c7;
+  border-radius: 0.5rem;
+  width: 80%;
+  font-size: 1rem;
+}
+
+button[type="submit"] {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #27ae60;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #218c53;
+}
+
 
 .crossed .cross {
   visibility: visible;
@@ -101,40 +133,14 @@ button:hover, a:hover {
 
 @media only screen and (max-width: 600px) {
   .bingo-cell {
-    flex: 0 0 calc(50% - 2rem);
+    flex: 0 0 calc(40% - 1.6rem);
   }
 
   .bingo-text {
-    font-size: 1.4rem; /* Use rem for font size */
+    font-size: 1.4rem;
   }
-}
 
-/* config.ejs specific styles */
-
-form {
-  display: flex;
-  flex-direction: column;
-  margin-top: 2rem;
-}
-
-label {
-  margin-bottom: 0.5rem;
-  color: #2c3e50; /* Dark blue-gray text color */
-}
-
-input {
-  padding: 0.8rem;
-  margin-bottom: 1rem;
-  border: 1px solid #bdc3c7; /* Light gray border */
-  border-radius: 0.5rem; /* Rounded corners */
-}
-
-/* Adjust the form button styling */
-form button {
-  margin-top: 1rem;
-  background-color: #27ae60; /* Green button color */
-}
-
-form button:hover {
-  background-color: #218c53; /* Darker green on hover */
+  .cross {
+    font-size: 1.6rem;
+  }
 }
