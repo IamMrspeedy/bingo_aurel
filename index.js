@@ -11,12 +11,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 let columnValues = [
-  ['Pardon Express', 'Roulage de pelle collectif', 'qqun cache mal qqch', 'Aurel pré-shot dialogue', 'Tromperie dans la cafet'],
-  ['quelqu un fait sa valise', 'Sacré José !', 'Johanna est Bigflo', 'Shoes sur le lit', 'Body shamming'],
-  ['ça parle en francs', 'rires sur truc bad', 'Aurel pre-shot le jingle', 'Dodo avec lumière', 'la cafet devient un étoilé'],
-  ['Rire préféré d Aurel', 'Mais putain Christian', 'ça passe par la fenêtre', 'Perche!', 'Personne boit pareil'],
-  ['ça joue la fin d un morceau', 'plouf dans la baignoire', 'Ils savent pas s assoir autour d une table', 'Mais putain Christian', 'Course à faire']
+  ["Pardon Express 😅", "Roulage de pelle collectif 🚜", "Quelqu'un cache mal quelque chose 🙈", "Aurel pré-shot dialogue 🎙️", "Tromperie dans la cafet 🍴"],
+  ["Quelqu'un fait sa valise 🧳", "Sacré José ! 😄", "Johanna est Bigflo 🎤", "Shoes sur le lit 👠", "Body shaming 🚷"],
+  ["Ça parle en francs 💰", "Rires sur truc bad 😬", "Aurel pré-shot le jingle 🎶", "Dodo avec lumière 💡", "La cafet devient un étoilé 🌟"],
+  ["Rire préféré d'Aurel 😄", "Mais putain Christian ! 😮", "Ça passe par la fenêtre 🪟", "Perche! 🎤", "Personne ne boit pareil 🍹"],
+  ["Ça joue la fin d'un morceau 🎸", "Plouf dans la baignoire 🛁", "Ils ne savent pas s'asseoir 🪑", "Mais putain Christian ! 😆", "Course à faire 🏃"]
 ];
+
 
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
