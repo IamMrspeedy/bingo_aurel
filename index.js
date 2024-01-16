@@ -7,12 +7,15 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// Serve static files from the 'public' directory
+app.use(express.static('public'));
+
 let columnValues = [
-  ['Apple', 'Banana', 'Cherry', 'Date', 'Fig'],
-  ['Grape', 'Honeydew', 'Ivy', 'Jackfruit', 'Kiwi'],
-  ['Lemon', 'Mango', 'Nectarine', 'Orange', 'Papaya'],
-  ['Quince', 'Raspberry', 'Strawberry', 'Tangerine', 'Uva'],
-  ['Vine', 'Watermelon', 'Xigua', 'Yellow Plum', 'Zucchini']
+  ['Pardon Express', 'Roulage de pelle collectif', 'qqun cache mal qqch', 'Aurel pré-shot dialogue', 'Tromperie dans la cafet'],
+  ['quelqu un fait sa valise', 'Sacré José !', 'Johanna est Bigflo', 'Shoes sur le lit', 'Body shamming'],
+  ['ça parle en francs', 'rires sur truc bad', 'Aurel pre-shot le jingle', 'Dodo avec lumière', 'la cafet devient un étoilé'],
+  ['Rire préféré d Aurel', 'Mais putain Christian', 'ça passe par la fenêtre', 'Perche!', 'Personne boit pareil'],
+  ['ça joue la fin d un morceau', 'plouf dans la baignoire', 'Ils savent pas s assoir autour d une table', 'Mais putain Christian', 'Course à faire']
 ];
 
 function shuffleArray(array) {
@@ -61,14 +64,14 @@ app.get('/randomize', (req, res) => {
 app.get('/config', (req, res) => {
   res.render('config', { columnValues });
 });
+
 app.post('/config', (req, res) => {
-    // Update columnValues based on user input
-    columnValues = req.body.columns.map(col => col.split(','));
-  
-    // Redirect back to the config page
-    res.redirect('/config');
-  });
-  
+  // Update columnValues based on user input
+  columnValues = req.body.columns.map(col => col.split(','));
+
+  // Redirect back to the config page
+  res.redirect('/config');
+});
 
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
