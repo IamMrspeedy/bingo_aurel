@@ -10,11 +10,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 let columnValues = [
-  ["Pardon Express 😅", "Roulage de pelle collectif 🚜", "Qqun cache mal qqchose 🙈", "Aurel pré-shot dialogue 🎙️", "Tromperie dans la cafet 🍴"],
-  ["Qqun fait sa valise 🧳", "Sacré José ! 😄", "Johanna est Bigflo 🎤", "Shoes sur le lit 👠", "Body shaming 🚷"],
-  ["Ça parle en francs 💰", "Rires sur truc bad 😬", "Aurel pré-shot le jingle 🎶", "Dodo avec lumière 💡", "La cafet devient un étoilé 🌟"],
-  ["Rire préféré d'Aurel 😄", "Mais putain Christian ! 😮", "Ça passe par la fenêtre 🪟", "Perche! 🎤", "Personne ne boit pareil 🍹"],
-  ["Ça joue la fin d'un morceau 🎸", "Plouf dans la baignoire 🛁", "Ils ne savent pas s'asseoir 🪑", "Mais putain Christian ! 😆", "Course à faire 🏃"]
+  ["PUTAIN CHRISTIAN", "RIRES SUR TRUC BAD", "💦", "OMBRE DE PERCHE", "FUN D'UN MORCEAU"],
+  ["GOUTTIÈRE", "SHOES SUR LIT", "« COURSE À FAIRE»", "CAFET ⬇️ ÉTOILÉ", "BODY SHAMING"],
+  ["SECRET MAL CACHÉ", "QQUN FAIT VALISE", "SACRÉ JOSÉ❤️", "RIRE PRÉF d'AUREL", "PARDON EXPRESS🙏"],
+  ["DODO AVEC LIGHT", "FRANCS", "PERSONNE BOIT PAREIL", "VESTE SUR ÉPAULE", "PRÉ-SHOT JINGLE"],
+  ["SAVENT PAS S'ASSOIR", "CHEAT IN CAFET", "PELLE COLLEC.", "PRÉ SHOT DIALOGUE", "PUTAIN CHRISTIAN!!!"]
 ];
 
 
