@@ -62,6 +62,10 @@ a:hover {
   border: 0.1rem solid black;
   margin: -3px;
 }
+.bingo-cell:hover{
+  background-color: #e74d3c67;
+
+}
 
 .bingo-text {
 
