@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 let columnValues = [
-  ["PUTAIN CHRISTIAN", "RIRES SUR TRUC BAD", "💦", "OMBRE DE PERCHE", "FUN D'UN MORCEAU"],
+  ["PUTAIN CHRISTIAN", "RIRES SUR TRUC BAD", "SPLASH !", "OMBRE DE PERCHE", "FUN D'UN MORCEAU"],
   ["GOUTT-IÈRE", "SHOES SUR LIT", "«COURSE À FAIRE»", "CAFET ⬇️ ÉTOILÉ", "BODY SHAMING"],
   ["SECRET MAL CACHÉ", "QQUN FAIT VALISE", "SACRÉ JOSÉ❤️", "RIRE PRÉF d'AUREL", "PARDON EXPRESS🙏"],
   ["DODO AVEC LIGHT", "FRANCS", "PERSONNE BOIT PAREIL", "VESTE SUR ÉPAULE", "PRÉ-SHOT JINGLE"],
