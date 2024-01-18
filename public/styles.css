@@ -144,12 +144,38 @@ button[type="submit"]:hover {
   visibility: visible;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
+  .bingo-board{
+    display: flex;
+    scale: 70%;
+  }
+  form {
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 5rem;
+  }
+  .container{
+    margin: auto;
+  }
+  header{
+    margin-bottom: -10%;
+  }
   .bingo-cell {
     flex: 0 0 calc(40% - 1.6rem);
   }
-
- 
+  body{
+background-color: white;
+  }
+  .container{
+    box-shadow: none;
+    padding: 0;
+  }
+  .bingo-board{
+    width: 100%;
+  }
 
   .cross {
     font-size: 1.6rem;
