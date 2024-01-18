@@ -10,11 +10,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 let columnValues = [
-  ["PUTAIN CHRISTIAN", "RIRES SUR TRUC BAD", "SPLASH !", "OMBRE DE PERCHE", "FUN D'UN MORCEAU"],
-  ["GOUTT-IÈRE", "SHOES SUR LIT", "«COURSE À FAIRE»", "CAFET ⬇️ ÉTOILÉ", "BODY SHAMING"],
-  ["SECRET MAL CACHÉ", "QQUN FAIT VALISE", "SACRÉ JOSÉ❤️", "RIRE PRÉF d'AUREL", "PARDON EXPRESS🙏"],
-  ["DODO AVEC LIGHT", "FRANCS", "PERSONNE BOIT PAREIL", "VESTE SUR ÉPAULE", "PRÉ-SHOT JINGLE"],
-  ["SAVENT PAS S'ASSOIR", "CHEAT IN CAFET", "PELLE COLLEC.", "PRÉ SHOT DIALOGUE", "PUTAIN CHRIS-TIAN!!!"]
+  ["PUTAIN CHRISTIAN", "ㅤRIRES ㅤSUR TRUC BAD", "SPLASH !", " ㅤOMBREㅤ DEㅤ PERCHE", "FIN D'UN MORCEAU"],
+  ["GOUTT-IÈRE", "ㅤSHOES ㅤSUR ㅤLIT", "«COURSE ㅤㅤÀㅤㅤ FAIRE»", "ㅤCAFET ㅤㅤ⬇️ㅤÉTOILÉ", "BODY SHAMING"],
+  ["SECRET MAL CACHÉ", "ㅤQQUNㅤ FAIT VALISE", "SACRÉ JOSÉ❤️", "RIRE ㅤPRÉFㅤ d'AUREL", "PARDON EXPRESS🙏"],
+  ["DODO AVEC LIGHT", "FRANCS", "PERSONNE BOIT PAREIL", "VESTE SUR ÉPAULE", "ㅤPRÉ-ㅤSHOT JINGLE"],
+  ["SAVENT PAS S'ASSOIR", "ㅤCHEATㅤ ㅤINㅤ CAFET", "PELLE COLLEC-ㅤTIVE", "PRÉ-ㅤ SHOTㅤ DIALOGUE", "PUTAIN CHRIS-TIAN!!!"]
 ];
 
 
