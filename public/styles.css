@@ -147,7 +147,7 @@ button[type="submit"]:hover {
 @media only screen and (max-width: 800px) {
   .bingo-board{
     display: flex;
-    scale: 70%;
+    scale: 60%;
   }
   form {
     padding: 2%;
@@ -178,6 +178,6 @@ background-color: white;
   }
 
   .cross {
-    font-size: 1.6rem;
+    font-size: 3rem;
   }
 }
